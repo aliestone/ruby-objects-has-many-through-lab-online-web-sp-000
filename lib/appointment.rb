@@ -12,14 +12,8 @@ class Appointment
   end
 
   def patient
-    @patient
+    Patient.new
   end
-
-  def doctor
-    doctor.appointment
-  end
-
-
 
   def self.all
     @@all
