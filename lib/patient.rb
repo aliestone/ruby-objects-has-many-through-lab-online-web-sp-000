@@ -16,5 +16,10 @@ class Patient
     patient(date, self, doctor)
   end
 
+  def appointments
+    Appointment.all {|appointment| appointment.patient} == self
+  end
+
+
 
 end
