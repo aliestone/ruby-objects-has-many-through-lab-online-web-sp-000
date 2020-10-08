@@ -11,8 +11,8 @@ class Appointment
     @@all << self
   end
 
-  def patient
-    Patient.self 
+  def appointments
+    @appointments
   end
 
   def self.all
