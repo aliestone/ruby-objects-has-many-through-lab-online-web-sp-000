@@ -16,7 +16,7 @@ class Appointment
   end
 
   def doctor
-    appointment.doctor
+    doctor.appointment
   end
 
 
