@@ -15,7 +15,7 @@ attr_accessor :name
   end
 
   def new_song(name, genre)
-    Song.new (name, self, genre)
+    Song.new(name, self, genre)
   end
 
   def songs(name)
@@ -24,6 +24,6 @@ attr_accessor :name
 
  def genres
      songs.map { |song| song.genre}
-   end
+end
 
 end
