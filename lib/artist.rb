@@ -19,4 +19,4 @@ attr_accessor :name, :artist :genre
     @genre = genre
   end
 
-  def songs
+end
