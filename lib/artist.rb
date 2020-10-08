@@ -23,4 +23,9 @@ attr_accessor :name, :artist, :genre
     @@all.detect{|a| a.name == name}
   end
 
+  def genres
+  self.songs.collect do |song|
+    song.genre
+  end
+
 end
