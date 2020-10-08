@@ -18,12 +18,12 @@ attr_accessor :name
     Song.new(name, self, genre)
   end
 
-  def songs(name)
-    Song.all.select {|song| song.artist == self}
- end
+  def songs
+    Song.all{|song| song.artist == self}
+  end
 
   def genres
-  songs.map { |song| song.genre}
+    songs.map{|song| song.genre}
   end
 
 end
