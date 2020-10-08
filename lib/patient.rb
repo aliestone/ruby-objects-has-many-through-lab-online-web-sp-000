@@ -20,7 +20,6 @@ class Patient
     Appointment.all do |appointment|
     appointment.patient == self
   end
-
-
+end
 
 end
