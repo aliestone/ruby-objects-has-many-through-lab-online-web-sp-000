@@ -16,7 +16,7 @@ class Patient
     Appointment.new(date, self, doctor)
   end
 
-  def appointments
+  def appointments(patient)
     Appointment.include? do |appointment|
     appointment.patient == self
   end
