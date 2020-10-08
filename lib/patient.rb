@@ -20,4 +20,9 @@ class Patient
     Appointment.all{|appointment| appointment.patient == self}
   end
 
+  def patient
+    self
+  end 
+  
+
 end
