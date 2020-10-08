@@ -22,12 +22,11 @@ attr_accessor :name, :artist :genre
   end
 
   def initialize(name)
-    @name = name
+    @name = artist
     @@all << self
   end
 
   def new_song(name,genre)
-    @name = name
+    @name = artist
     @genre = genre
   end
-  
