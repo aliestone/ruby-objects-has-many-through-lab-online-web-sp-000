@@ -3,11 +3,10 @@ class Patient
 
   @@all = []
   @@doctor = []
-  def initialize(name, doctor)
+  def initialize(name)
     @name = name
     @doctor = doctor
     @@all << self
-    @@doctors << doctor
   end
 
   def self.all
