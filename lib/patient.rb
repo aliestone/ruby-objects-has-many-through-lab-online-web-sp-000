@@ -9,6 +9,8 @@ class Patient
     @@all << self
   end
 
+  @doctors = []
+
   def self.all
     @@all
   end
