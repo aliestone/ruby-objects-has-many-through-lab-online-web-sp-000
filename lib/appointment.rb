@@ -15,6 +15,11 @@ class Appointment
     @patient
   end
 
+  def doctor
+    @doctor
+  end
+  
+
 
   def self.all
     @@all
