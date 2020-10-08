@@ -22,7 +22,7 @@ class Patient
 
   def patient
     self
-  end 
-  
+  end
+
 
 end
