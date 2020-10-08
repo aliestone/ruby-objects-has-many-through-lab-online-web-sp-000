@@ -12,7 +12,7 @@ class Appointment
   end
 
   def patient
-    Patient.new
+    Patient.appointment
   end
 
   def self.all
