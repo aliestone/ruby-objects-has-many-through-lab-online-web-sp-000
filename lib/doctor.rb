@@ -13,4 +13,13 @@ class Doctor
     @@all << self
   end
 
+  def appointments
+    Appointment.all.select {|song| appointment.doctor == self}
+  end
+
+  def patients
+    appointments.map{|appointment| appointment.patient}
+  end
+    
+
 end
