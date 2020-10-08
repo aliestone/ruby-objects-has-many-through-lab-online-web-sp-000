@@ -1,31 +1,33 @@
-
-#rspec ./spec/01_artist_spec.rb:7 # Artist #name has a name
-#rspec ./spec/01_artist_spec.rb:15 # Artist .all knows about all artist instances
-#rspec ./spec/01_artist_spec.rb:25 # Artist #songs returns all songs associated with this Artist
-#rspec ./spec/01_artist_spec.rb:39 # Artist #new_song given a name and genre, creates a new song associated with that artist
-#rspec ./spec/01_artist_spec.rb:52 # Artist #genres has many genres, through songs
-
+- The `Artist` class needs a class variable `@@all` that begins as an empty array
+- The `Artist` class needs a class method `.all` that lists each artist in the
+  class variable
+- An artist is initialized with a name and is saved in the `@@all` array.
+- The `Artist` class needs an instance method, `#new_song`, that takes in an
+  argument of a name and genre creates a new song. That song should know that it
+  belongs to the artist.
+- The `Artist` class needs an instance method, `#songs`, that iterates through all
+  songs and finds the songs that belong to that artist. Try using `select` to
+  achieve this.
+- The `Artist` class needs an instance method, `#genres` that iterates over that
+  artist's songs and collects the genre of each song.
 
 class Artist
-  attr_accessor :name
+
+attr_accessor :name, :artist :genre
 
   @@all = []
+
+  def self.all
+    @@all
+  end
 
   def initialize(name)
     @name = name
     @@all << self
   end
 
-  def self.all
-    @@all
+  def new_song(name,genre)
+    @name = name
+    @genre = genre
   end
-
-  def songs(artist)
-    artist.songs(artist)
-  end
-
-  def new_song(name, genre)
-    Song.new(self, name, genre)
-  end
-
-end
+  
